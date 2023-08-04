@@ -25,17 +25,37 @@ body{
 
 /*Configurações do Main*/
 main{
-    width: 450px;
     padding: 20px 20px 10px 20px;
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: grid;
+    grid-template-areas: "login cadastro";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 70vh;
     background-color: var(--white);
 }
 div.main{
-    width: 200px;
+    width: auto;
+    align-self: stretch;
+    justify-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div#login{
+    grid-area: login;
+    background-color: var(--green);
+    color: var(--white);
+}
+div#login > h1{
+    color: var(--white);
+}
+
+div#cadastro{
+    grid-area: cadastro;
 }
 h1{
     margin-bottom: 20px;
@@ -53,23 +73,26 @@ label{
 .material-symbols-outlined {
     font-size: 30px;
 }
-input{
+button, input{
     border: none;
     height: 40px;
     width: 300px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: var(--white_gray);
+}
+button{
+    border: 1px solid var(--white);
 }
 ::-webkit-input-placeholder{
     color: var(--gray);
 }
-input[type=submit]{
+button, input[type=submit]{
     width: 335px;
     background-color: var(--green);
     color: var(--white);
 }
-input[type=submit]:hover{
+button:hover, input[type=submit]:hover{
     background-color: #4e9b8a;
     cursor: pointer;
     transition: 0.2s ease;

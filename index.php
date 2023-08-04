@@ -9,10 +9,11 @@
 </head>
 <body>
     <main>
-        <div class="main">
-            sadasd
+        <div id="login" class="main">
+            <h1>Bem-Vindo de Volta!</h1>
+            <button onclick="window.location.href='login.php'">Logar</button>
         </div>
-        <div class="main"> 
+        <div id="cadastro" class="main"> 
             <h1>Crie Sua Conta</h1>
             <form action="cadastrar.php" method="post" autocomplete="on">
                 <div class="form">
