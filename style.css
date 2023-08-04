@@ -6,14 +6,6 @@
     margin: 0px;
     box-sizing: border-box;
 }
-html, body{
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-}
-body{
-    position: absolute;
-}
 
 /*Variáveis de Cores*/
 :root{
@@ -23,9 +15,20 @@ body{
     --gray: #798c8a;
 }
 
+/*Configurações do HTML e Body*/
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body{
+    position: absolute;
+    background-color: var(--white_gray);
+}
+
 /*Configurações do Main*/
 main{
-    padding: 20px 20px 10px 20px;
+    padding: 0px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -34,7 +37,9 @@ main{
     grid-template-areas: "login cadastro";
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 70vh;
-    background-color: var(--white);
+    background-color: var(--white_gray);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.089);
+    max-width: 1000px;
 }
 div.main{
     width: auto;
@@ -44,11 +49,15 @@ div.main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 div#login{
     grid-area: login;
     background-color: var(--green);
     color: var(--white);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
 }
 div#login > h1{
     color: var(--white);
@@ -56,6 +65,9 @@ div#login > h1{
 
 div#cadastro{
     grid-area: cadastro;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--white);
 }
 h1{
     margin-bottom: 20px;
@@ -66,6 +78,9 @@ div.form{
     display: flex;
     place-items: center;
     gap: 5px;
+}
+div.entre{
+    margin-bottom: 19px;
 }
 label{
     color: var(--gray);
