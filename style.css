@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/*Configurações Gerais*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body{
+    position: absolute;
+}
+
+/*Variáveis de Cores*/
+:root{
+    --green: #58af9c;
+    --white: #ffffff;
+    --white_gray: #ecf0f1;
+    --gray: #798c8a;
+}
+
+/*Configurações do Main*/
+main{
+    width: 450px;
+    padding: 20px 20px 10px 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: var(--white);
+}
+div.main{
+    width: 200px;
+}
+h1{
+    margin-bottom: 20px;
+    color: var(--green);
+}
+div.form{
+    margin-bottom: 10px;
+    display: flex;
+    place-items: center;
+    gap: 5px;
+}
+label{
+    color: var(--gray);
+}
+.material-symbols-outlined {
+    font-size: 30px;
+}
+input{
+    border: none;
+    height: 40px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--white_gray);
+}
+::-webkit-input-placeholder{
+    color: var(--gray);
+}
+input[type=submit]{
+    width: 335px;
+    background-color: var(--green);
+    color: var(--white);
+}
+input[type=submit]:hover{
+    background-color: #4e9b8a;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
