@@ -16,7 +16,7 @@
             $usuario = mysqli_fetch_assoc($resultado);
             if($usuario !== null){
                 if(password_verify($password, $usuario["senha"])){
-                    $_SESSION["msg"] = "<p style='color: green;text-align: center;width: 335px;'>Logado com sucesso</p>";
+                    $_SESSION["msg"] = "<p style='color: green;text-align: center;width: 335px;'>Logado com sucesso! Olá, ".$usuario['nome']."</p>";
                     header("Location: login.php");
                 }else{
                     $_SESSION["msg"] = "<p style='color: red;text-align: center;width: 335px;'>A senha está incorreta</p>";
