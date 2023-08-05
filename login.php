@@ -28,6 +28,9 @@
                     <input type="password" name="password" id="password" placeholder="Password" required>
                 </div>
                 <div class="form">
+                    <p>Não possui uma conta? <a href="index.php" target="_self" rel="prev">Crie uma agora!</a></p>
+                </div>
+                <div class="form">
                     <?php
                         if(isset($_SESSION["msg"])){
                             echo $_SESSION["msg"];

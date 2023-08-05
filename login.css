@@ -1,13 +1,64 @@
 @charset "UTF-8";
-
-/*Configurações do Main*/
-main{
-    max-width: 500px;
-    grid-template-areas: "login";
-    grid-template-columns: 1fr;
+@media all{
+    /*Configurações do Main*/
+    main{
+        max-width: 500px;
+        grid-template-areas: "login";
+        grid-template-columns: 1fr;
+    }
+    div#cadastro{
+        grid-area: login;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    div.form{
+        width: 335px;
+    }
+    p{
+        width: 335px;
+        text-align: center;
+    }
+    a{
+        color: var(--green);
+        text-decoration: none;
+    }
+    a:hover{
+        color: #4e9b8a;
+        text-decoration: underline;
+    }
 }
-div#cadastro{
-    grid-area: login;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+@media screen and (max-width: 400px){
+    /*Configurações do Main*/
+    main{
+        grid-template-areas: "login";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    div#cadastro > h1{
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    div.form{
+        width: 265px;
+    }
+    button, input{
+        width: 230px;
+    }
+    p{
+        width: 265px;
+    }
+    button, input[type=submit]{
+        font-size: 1em;
+    }
+    input[type=submit]{
+        width: 265px;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 768px){
+    /*Configurações do Main*/
+    main{
+        grid-template-areas: "login";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }

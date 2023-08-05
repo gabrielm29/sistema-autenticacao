@@ -16,14 +16,14 @@
             $usuario = mysqli_fetch_assoc($resultado);
             if($usuario !== null){
                 if(password_verify($password, $usuario["senha"])){
-                    $_SESSION["msg"] = "<p style='color: green;text-align: center;width: 335px;'>Logado com sucesso! Olá, ".$usuario['nome']."</p>";
+                    $_SESSION["msg"] = "<p style='color: #4e9b8a;text-align: center;width: 335px;'>Logado com sucesso! Olá, ".$usuario['nome']."</p>";
                     header("Location: login.php");
                 }else{
-                    $_SESSION["msg"] = "<p style='color: red;text-align: center;width: 335px;'>A senha está incorreta</p>";
+                    $_SESSION["msg"] = "<p style='color: #960000;text-align: center;width: 335px;'>A senha está incorreta</p>";
                     header("Location: login.php");
                 }
             }else{
-                $_SESSION["msg"] = "<p style='color: red;text-align: center;width: 335px;'>E-mail incorreto</p>";
+                $_SESSION["msg"] = "<p style='color: #960000;text-align: center;width: 335px;'>E-mail incorreto ou inexistente</p>";
                 header("Location: login.php");
             }
         }catch (mysqli_sql_exception $error){
