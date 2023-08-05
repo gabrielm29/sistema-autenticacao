@@ -7,8 +7,6 @@
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL) ?? "";
     $password = $_POST["password"] ?? "";
 
-    $retorno;
-
     /*Verificação*/
         $select_query = "SELECT * FROM usuarios WHERE email='$email'";
         try{
